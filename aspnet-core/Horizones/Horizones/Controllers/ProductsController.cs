@@ -1,8 +1,7 @@
 ﻿using Core.Entities;
 using Core.Interfaces;
-using Infrastructure.Data;
+using Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Horizones.Controllers
 {
@@ -26,7 +25,8 @@ namespace Horizones.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            IReadOnlyList<Product> products = await _productRepository.ListAllAsync();
+            ProductsWithTypesAndBrandsSpecification spec = new();
+            IReadOnlyList<Product> products = await _productRepository.ListAsync(spec);
             return Ok(products);
         }
 

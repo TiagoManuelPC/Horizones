@@ -18,6 +18,14 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 var app = builder.Build();
+//TODO: may need changing
+app.UseCors(x => x
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
+        app.UseHttpsRedirection();
+//TODO: may need changing
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
