@@ -7,27 +7,29 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
+import { CoreModule } from './core/core.module';
+import { ShopModule } from './shop/shop.module';
 
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		NavBarComponent,
-  DetailsComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		BrowserAnimationsModule,
-		FormsModule,
-		RatingModule.forRoot(),
-		BsDatepickerModule.forRoot(),
-		HttpClientModule
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        DetailsComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        RatingModule.forRoot(),
+        BsDatepickerModule.forRoot(),
+        HttpClientModule,
+        CoreModule,
+        ShopModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
