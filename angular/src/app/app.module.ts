@@ -10,7 +10,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
 import { CoreModule } from './core/core.module';
-import { ShopModule } from './shop/shop.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { ShopModule } from './shop/shop.module';
         BsDatepickerModule.forRoot(),
         HttpClientModule,
         CoreModule,
-        ShopModule
+        HomeModule
     ],
     providers: [],
     bootstrap: [AppComponent]
