@@ -20,12 +20,12 @@ app.UseMiddleware<ExceptionMidleware>();
 app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
 //TODO: may need changing
-app.UseCors(x => x
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
+// app.UseCors(x => x
+//             .AllowAnyOrigin()
+//             .AllowAnyMethod()
+//             .AllowAnyHeader());
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 //TODO: may need changing
 
 //TODO: restore if if needed
@@ -35,6 +35,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 //}
 
+app.UseCors("CorsPolicy");
 app.UseStaticFiles();
 
 app.UseAuthorization();
