@@ -20,6 +20,6 @@ import { ShopRoutingModule } from './shop-routing.module';
     ShopRoutingModule
   ],
   exports: [
-  ]
+  ],
 })
 export class ShopModule { }
