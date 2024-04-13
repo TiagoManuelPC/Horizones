@@ -1,0 +1,258 @@
+@import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-material.css";
+
+ag-grid-angular {
+    width: 100%;
+    height: 100%;
+}
+
+.ag-theme-material {
+    --ag-material-accent-color: #3699FF;
+    --ag-material-primary-color: #3699FF;
+    --ag-checkbox-background-color: #EBEDF3;
+    --ag-row-hover-color: #D0EAFC;
+    --ag-column-hover-color: #D0EAFC;
+    --ag-selected-row-background-color: #CFE3F7;
+    font-family: inherit;
+}
+
+.ag-theme-material .ag-row {
+    border-top: 0px solid transparent !important;
+    border-bottom: 0px solid transparent !important;
+    cursor: pointer;
+}
+
+.ag-theme-material.no-row-click .ag-row {
+    cursor: default;
+}
+
+.ag-theme-material .ag-row-odd {
+    background-color: #F3F6F9;
+}
+
+.ag-theme-material .ag-row-odd:hover {
+    background-color: #D0EAFC;
+}
+
+.ag-theme-material .ag-header-cell {
+    background-color: white;
+    font-size: 16px;
+    color: #3F4254;
+    border-top: 0px solid transparent !important;
+    border-right: solid 1px;
+    border-right-color: var(--ag-border-color, #E2E2E2);
+}
+
+.ag-theme-material .ag-header-container .ag-header-cell.ag-header-cell-sortable:hover,
+.ag-theme-material .ag-header-container .ag-header-cell.ag-floating-filter:hover {
+    background-color: white !important;
+}
+
+.ag-theme-material .ag-header-cell:first-of-type:not(.ag-header-cell-moving):hover,
+.ag-theme-material .ag-header-cell:not(.ag-column-resize)+.ag-header-cell:not(.ag-header-cell-moving):hover {
+    background-color: white !important;
+}
+
+.ag-theme-material .ag-cell {
+    display: flex;
+    align-items: center;
+}
+
+.ag-theme-material input[class^=ag-][type=text],
+.ag-theme-material input[class^=ag-][type=date],
+.ag-theme-material input[class^=ag-][type=number],
+.ag-theme-material input[class^=ag-][type=text]:disabled {
+    border: 1px solid #E4E6EF;
+    border-radius: 0.42rem;
+    padding: 2px !important;
+    height: 24px;
+    font-size: 12px;
+}
+
+.ag-theme-material button.ag-floating-filter-button-button {
+    width: 24px;
+    height: 24px;
+    margin-left: -20px;
+}
+
+.ag-theme-material button.ag-floating-filter-button-button:hover {
+    text-align: center;
+    background-color: #F0F9FF;
+    color: var(--opuz-blue);
+    border-radius: 0.42rem;
+}
+
+.ag-theme-material .ag-ltr .ag-cell-focus {
+    border: none;
+}
+
+/* the following styles deal with the scrollbar styling
+for the grid but the same styling can be applied to scrolls
+by using class scroll */
+.scroll::-webkit-scrollbar,
+.ag-root ::-webkit-scrollbar {
+    width: 0.75em;
+    height: 0.75em;
+}
+
+.scroll::-webkit-scrollbar-track,
+.ag-root ::-webkit-scrollbar-track {
+    background: none;
+    padding-block: 1rem;
+    background-color: transparent;
+}
+
+.scroll::-webkit-scrollbar-thumb,
+.ag-root ::-webkit-scrollbar-thumb {
+    border-radius: 100vw;
+    background: #C1C1C1;
+}
+
+.scroll::-webkit-scrollbar-corner,
+.ag-root ::-webkit-scrollbar-corner {
+    background: #F1F1F1;
+}
+
+.card-body.scroll {
+    max-height: calc(100vh - 325px);
+    overflow-y: scroll;
+}
+
+/* add no-arrow class to dropdown buttons that don't need an arrow */
+button.no-arrow.dropdown-toggle::after {
+    content: initial
+}
+
+/* use max-height class on the highest level div in the HTML to remove double scroll */
+.max-height {
+    height: 98%;
+}
+
+/* Use class card-grid-details on the details side panel div in the HTML */
+.card-grid-details.card-border>.card-header {
+    border-bottom: 1px solid #EBEDF3 !important;
+}
+
+.card-grid-details .card-body th {
+    width: 120px;
+    padding-left: 0px;
+}
+
+.grid-control-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px 22px 10px 22px;
+}
+
+.grid-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    padding-left: 1.5rem;
+}
+
+.subpage-grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 150px);
+    padding: 0px;
+    border: 1px solid var(--opuz-secondary);
+    border-radius: 0.42rem;
+}
+
+.subpage-grid-container.sub-grid {
+    height: calc(100vh - 600px);
+    min-height: 300px;
+    margin-bottom: 50px;
+}
+
+.grid-container-tab {
+    width: 100%;
+    height: 100% !important;
+    padding-left: 1.5rem;
+    min-height: 532px;
+}
+
+/* Filter Tags Styles */
+.grid-filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0rem 1.75rem;
+}
+
+.grid-filter-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3699FF;
+    font-weight: 500 !important;
+    background-color: #D7EBFF;
+    border: solid 1px #3699FF;
+    border-radius: 10rem;
+    padding: 0.25rem 0.75rem;
+    margin: 0rem 0.5rem 0.5rem 0rem;
+}
+
+.grid-filter-tag>button {
+    margin-left: 0.5rem;
+}
+
+.tag-close {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+.tag-close>i {
+    color: #3699FF;
+}
+
+.tag-close:hover {
+    background-color: #FDDCDF;
+    border: none;
+    border-radius: 50%;
+}
+
+.tag-close:hover>i {
+    color: #F64E60;
+}
+
+@media screen and (max-width: 768px) {
+    .card-grid-details .display-4 {
+        font-size: 1.25rem !important;
+        font-weight: 400;
+    }
+
+    .card-grid-details .card-header,
+    .card-grid-details .card-body {
+        padding: 0.25rem !important;
+    }
+
+    .card-grid-details span>h3 {
+        font-size: 0.75rem;
+    }
+
+    .card-grid-details .card-body.scroll {
+        overflow-x: scroll;
+    }
+
+    .ag-theme-material .ag-header-cell-text {
+        font-size: 1rem;
+    }
+}

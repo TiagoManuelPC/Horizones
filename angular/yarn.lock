@@ -2186,6 +2186,18 @@ adjust-sourcemap-loader@^4.0.0:
     loader-utils "^2.0.0"
     regex-parser "^2.2.11"
 
+ag-grid-angular@^31.2.1:
+  version "31.2.1"
+  resolved "https://registry.yarnpkg.com/ag-grid-angular/-/ag-grid-angular-31.2.1.tgz#b84561035776f83d4128e66d1fe9885b2d76f6bc"
+  integrity sha512-8PhyQGsUNeLKBg++bQHlDv+ktpwv+hrFWA5hMk8HBUiCgGx/93N6sLBj+FQzAX5a2FuEWu0FF6ZLPBhmqYP7zQ==
+  dependencies:
+    tslib "^2.3.0"
+
+ag-grid-community@^31.2.1:
+  version "31.2.1"
+  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-31.2.1.tgz#6031c91baa5caebccfa58a5131efc13339643e50"
+  integrity sha512-D+gnUQ4dHZ/EQJmupQnDqcEKiCEeuK5ZxlsIpdPKgHg/23dmW+aEdivtB9nLpSc2IEK0RUpchcSxeUT37Boo5A==
+
 agent-base@^7.0.2, agent-base@^7.1.0, agent-base@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-7.1.1.tgz#bdbded7dfb096b751a2a087eeeb9664725b2e317"
