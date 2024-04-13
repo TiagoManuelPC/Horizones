@@ -8,20 +8,29 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { TestErrorComponent } from './test-error/test-error.component';
 import { GridTestComponent } from './grid-test/grid-test.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ServerErrorComponent } from './server-error/server-error.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
     NavBarComponent,
     SectionHeaderComponent,
     TestErrorComponent,
-    GridTestComponent
+    GridTestComponent,
+    NotFoundComponent,
+    ServerErrorComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     BreadcrumbModule,
     NgxSpinnerModule,
-    AgGridModule
+    AgGridModule,
+    ToastrModule.forRoot({
+        positionClass: 'toast-bottom-right',
+        preventDuplicates: true
+    })
   ],
   exports: [
     NavBarComponent,

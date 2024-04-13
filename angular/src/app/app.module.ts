@@ -12,6 +12,7 @@ import { DetailsComponent } from './details/details.component';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
+import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
         HomeModule,
     ],
     providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }
     ],
     bootstrap: [AppComponent]
