@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "@paralleldrive/cuid2": "^2.2.2",
     "@popperjs/core": "^2.11.8",
     "@types/mime": "3.0.4",
     "ag-grid-angular": "^31.2.1",
