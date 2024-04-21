@@ -1,5 +1,6 @@
 using AutoMapper;
 using Core.Entities;
+using Core.Entities.Identity;
 using Horizones.Dtos;
 
 namespace Horizones.Helpers
@@ -12,6 +13,8 @@ namespace Horizones.Helpers
             .ForMember(x => x.ProductBrand, o => o.MapFrom(x => x.ProductBrand.Name))
             .ForMember(x => x.ProductType, o => o.MapFrom(x => x.ProductType.Name))
             .ForMember(x => x.PictureUrl, o => o.MapFrom<ProductUrlResolver>());
+    //ReverseMap maps the enties both ways (get set for example)
+            CreateMap<Address, AddressDto>().ReverseMap();
         }
     }
 }

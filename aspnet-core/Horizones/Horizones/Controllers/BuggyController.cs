@@ -1,5 +1,6 @@
 using Horizones.Errors;
 using Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Horizones.Controllers
@@ -10,6 +11,13 @@ namespace Horizones.Controllers
         public BuggyController(StoreContext storeContext)
         {
             _storeContext = storeContext;
+        }
+
+        [HttpGet("testauth")]
+        [Authorize]
+        public ActionResult<string> GetSecretText()
+        {
+            return "This is the secret";
         }
 
         [HttpGet("notfound")]
