@@ -13,8 +13,13 @@ namespace Horizones.Helpers
             .ForMember(x => x.ProductBrand, o => o.MapFrom(x => x.ProductBrand.Name))
             .ForMember(x => x.ProductType, o => o.MapFrom(x => x.ProductType.Name))
             .ForMember(x => x.PictureUrl, o => o.MapFrom<ProductUrlResolver>());
-    //ReverseMap maps the enties both ways (get set for example)
+
+            //ReverseMap maps the enties both ways (get set for example)
             CreateMap<Address, AddressDto>().ReverseMap();
+
+            CreateMap<CustomerBasketDto, CustomerBasket>();
+
+            CreateMap<BasketItemDto, BasketItem>();
         }
     }
 }
